@@ -1,0 +1,517 @@
+/* ==========================================================================
+   MINDCARE Activities Page Styles (Desktop Optimized)
+   ========================================================================== */
+
+.activities-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-cream-bg);
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+}
+
+/* ==========================================================================
+   LEFT SIDEBAR (Consistent with HomePage)
+   ========================================================================== */
+
+.activities-sidebar {
+  width: 280px;
+  min-width: 280px;
+  background-color: var(--color-green-deep);
+  color: var(--color-cream-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 38px 24px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Sidebar Brand Header */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 4px;
+}
+
+.sidebar-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-cream-light);
+  line-height: 1;
+}
+
+/* Navigation List */
+.sidebar-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #C3D5CD;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.sidebar-nav-btn:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-cream-light);
+  transform: translateX(2px);
+}
+
+/* Active Nav Pill: Warm Peach/Cream Filled Pill */
+.sidebar-nav-btn.active {
+  background-color: #F5E8D8;
+  color: var(--color-green-dark);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+/* Sidebar Bottom Navigation */
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid rgba(215, 231, 222, 0.15);
+  padding-top: 24px;
+}
+
+.sidebar-bottom .sidebar-nav-btn {
+  color: #A9C2B7;
+  font-size: 1.05rem;
+  padding: 13px 18px;
+}
+
+.sidebar-bottom .sidebar-nav-btn:hover {
+  color: var(--color-cream-light);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================================================
+   MAIN CONTENT WRAPPER & TOP STATUS BAR
+   ========================================================================== */
+
+.activities-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--color-cream-bg);
+  overflow-y: auto;
+}
+
+/* Top Status Bar */
+.activities-top-bar {
+  padding: 30px 60px 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+}
+
+.connected-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #557267;
+  font-size: 0.95rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.online-pill {
+  background-color: #E2ECE5;
+  color: #385C50;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.settings-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #EFE7DC;
+  color: #446358;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.settings-icon-btn:hover {
+  background-color: #E5DDD0;
+  transform: rotate(15deg);
+}
+
+.user-avatar-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--color-coral);
+  color: #FAF6F0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(223, 138, 115, 0.28);
+  user-select: none;
+}
+
+/* ==========================================================================
+   ACTIVITIES CONTENT BODY
+   ========================================================================== */
+
+.activities-content-body {
+  padding: 16px 60px 64px 60px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+/* Header Row: Title on Left, Adaptive Pill on Right */
+.activities-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.activities-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.activities-coral-eyebrow {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #D48D75;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.01em;
+}
+
+.activities-main-heading {
+  font-family: 'Fraunces', 'Noto Serif Bengali', 'Noto Serif Devanagari', serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: var(--color-green-dark);
+  line-height: 1.15;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+.activities-subtitle {
+  font-size: 1.18rem;
+  color: #557267;
+  line-height: 1.45;
+  max-width: 680px;
+  margin: 0;
+}
+
+/* Adaptive Level Pill */
+.adaptive-level-pill {
+  background-color: #DDEEE5;
+  color: #2F5245;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  flex-shrink: 0;
+  margin-top: 60px;
+}
+
+/* ==========================================================================
+   2-COLUMN ACTIVITY CARDS GRID
+   ========================================================================== */
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+/* Activity Card Base */
+.activity-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 38px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(22, 57, 49, 0.04);
+}
+
+.activity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(22, 57, 49, 0.09);
+}
+
+/* Card Background Color Variations matching prototype */
+.activity-card.card-peach {
+  background-color: #F8D8C8;
+}
+
+.activity-card.card-green {
+  background-color: #D2EBE0;
+}
+
+.activity-card.card-yellow {
+  background-color: #F7E6BA;
+}
+
+.activity-card.card-lavender {
+  background-color: #DFE1F5;
+}
+
+/* Decorative Circular Ring in bottom-right corner */
+.activity-deco-ring {
+  position: absolute;
+  bottom: -48px;
+  right: -48px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 24px solid rgba(255, 255, 255, 0.42);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Card Top Row */
+.activity-card-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 52px;
+}
+
+/* Small cream/off-white rounded square behind card icon */
+.activity-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background-color: #FAF7F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-green-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Small "completed" status pill badge */
+.activity-status-badge {
+  background-color: #FFFFFF;
+  color: #183D36;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.status-check {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #183D36;
+}
+
+/* Card Center Content */
+.activity-card-center {
+  position: relative;
+  z-index: 2;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+
+.activity-card-title {
+  font-family: 'Fraunces', 'Noto Serif Bengali', 'Noto Serif Devanagari', serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--color-green-dark);
+  letter-spacing: -0.015em;
+  line-height: 1.18;
+  margin: 0 0 10px 0;
+}
+
+.activity-card-desc {
+  font-size: 1.12rem;
+  color: #4D645C;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Card Bottom Action: "Play now →" */
+.activity-card-bottom {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.activity-play-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-green-dark);
+  font-family: var(--font-sans);
+  font-size: 1.12rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.activity-play-btn:hover {
+  color: #0E2923;
+  transform: translateX(3px);
+}
+
+.play-arrow {
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.activity-play-btn:hover .play-arrow {
+  transform: translateX(4px);
+}
+
+.activity-play-btn:focus-visible {
+  outline: 2px solid var(--color-green-dark);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   BOTTOM INFORMATION BANNER
+   ========================================================================== */
+
+.activities-info-banner {
+  background-color: rgba(250, 247, 242, 0.85);
+  border: 1.5px solid rgba(24, 61, 54, 0.08);
+  border-radius: 20px;
+  padding: 22px 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.info-banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-banner-text {
+  font-size: 1.05rem;
+  color: #557267;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION (For clean placeholder feedback)
+   ========================================================================== */
+
+.activities-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: #183D36;
+  color: #FAF6F0;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1.02rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  z-index: 100;
+  animation: toastFadeIn 0.25s ease-out;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

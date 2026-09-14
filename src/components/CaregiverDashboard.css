@@ -1,0 +1,1016 @@
+/* Caregiver Dashboard Styles */
+.caregiver-dashboard-root {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #FBF8F2;
+  color: #183D36;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Header */
+.caregiver-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background-color: #FAF7F2;
+  border-bottom: 1px solid #ECE4D8;
+}
+
+.caregiver-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.caregiver-brand .brand-name {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #183D36;
+}
+
+.caregiver-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.elder-view-btn {
+  background-color: #FAF7F2;
+  border: 1px solid #DFD7CB;
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #183D36;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.elder-view-btn:hover {
+  background-color: #F2ECE2;
+  border-color: #CFC5B7;
+}
+
+.caregiver-signout-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #FAF7F2;
+  border: 1px solid #DFD7CB;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #183D36;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.caregiver-signout-btn:hover {
+  background-color: #F2ECE2;
+  border-color: #CFC5B7;
+}
+
+/* Main Container */
+.caregiver-dashboard-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 36px 56px;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.caregiver-hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.caregiver-date-eyebrow {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #C27157;
+  letter-spacing: 0.02em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.caregiver-hero-title {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 34px;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.caregiver-hero-subtitle {
+  font-size: 15px;
+  color: #5C746E;
+  margin: 0;
+}
+
+.connected-status-pill {
+  background-color: #D8ECE2;
+  color: #183D36;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.connected-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #2E7D63;
+}
+
+/* Summary Grid */
+.caregiver-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-metric-card {
+  background-color: #FAF7F2;
+  border: 1px solid #ECE4D8;
+  border-radius: 18px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.metric-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6C827B;
+  margin-bottom: 10px;
+}
+
+.metric-value {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: #183D36;
+  line-height: 1.1;
+}
+
+/* Middle Section: Observations & Alerts */
+.caregiver-middle-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* Observations Card */
+.caregiver-observations-card {
+  background-color: #FAF7F2;
+  border: 1px solid #ECE4D8;
+  border-radius: 22px;
+  padding: 26px 28px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.section-title {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0 0 18px 0;
+}
+
+.observation-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.observation-item {
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.observation-steady {
+  background-color: #EBF3EE;
+}
+
+.observation-prompt {
+  background-color: #FDF0E7;
+}
+
+.observation-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.steady-icon {
+  background-color: #D6E8DE;
+}
+
+.prompt-icon {
+  background-color: #F8DFD2;
+}
+
+.observation-content {
+  flex: 1;
+}
+
+.observation-headline {
+  font-size: 15px;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0 0 4px 0;
+}
+
+.observation-desc {
+  font-size: 13.5px;
+  color: #4A635B;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.observation-prompt .observation-desc {
+  color: #6C594C;
+}
+
+/* Gentle Alerts Card */
+.caregiver-alerts-card {
+  background-color: #204C41;
+  border-radius: 22px;
+  padding: 26px 28px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(24, 61, 54, 0.15);
+}
+
+.alerts-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.alerts-title {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #FAF7F2;
+  margin: 0;
+}
+
+.alerts-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.gentle-alert-banner {
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.alert-coral-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E07A5F;
+  flex-shrink: 0;
+}
+
+.alert-text {
+  color: #FAF7F2;
+  font-size: 14px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.alert-dismiss-btn {
+  background: transparent;
+  border: none;
+  color: #9FBDB4;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.alert-dismiss-btn:hover {
+  color: #FFFFFF;
+}
+
+.alert-dismissed-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px 18px;
+  width: 100%;
+  font-size: 13.5px;
+  color: #D3E4DE;
+}
+
+.dismissed-check {
+  color: #6FCF97;
+  font-weight: bold;
+}
+
+.alert-undo-btn {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  color: #FAF7F2;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.alert-undo-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.alerts-footer-note {
+  margin-top: 24px;
+}
+
+.alerts-footer-note p {
+  font-size: 12.5px;
+  color: #8BAFA4;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bottom Grid: Activity Overview, Recent Sessions & Reminders */
+.caregiver-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.caregiver-bottom-card {
+  background-color: #FAF7F2;
+  border: 1px solid #ECE4D8;
+  border-radius: 22px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.bottom-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.bottom-card-header .section-title {
+  margin: 0;
+  font-size: 19px;
+}
+
+.bottom-card-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #5C746E;
+  background-color: #EFE9DF;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Activity Overview List */
+.activity-overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-overview-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: #F4EFE9;
+  transition: background-color 0.15s ease;
+}
+
+.activity-overview-row:hover {
+  background-color: #EFE9E1;
+}
+
+.activity-row-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.activity-icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #E2ECE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #183D36;
+}
+
+.activity-row-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.activity-sessions-count {
+  font-size: 12px;
+  color: #6C827B;
+}
+
+.activity-accuracy-badge {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #204C41;
+  background-color: #DCEBE3;
+  padding: 3px 7px;
+  border-radius: 6px;
+}
+
+.activity-accuracy-badge.unplayed {
+  background-color: #E8E2D8;
+  color: #7A7266;
+  font-weight: 500;
+  font-size: 11.5px;
+}
+
+.empty-recent-sessions,
+.empty-reminders-overview {
+  padding: 24px 16px;
+  text-align: center;
+  color: #6C827B;
+  font-size: 13.5px;
+  background-color: #F6F1EA;
+  border-radius: 12px;
+}
+
+.empty-recent-sessions p,
+.empty-reminders-overview p {
+  margin: 0;
+}
+
+/* Recent Sessions List */
+.recent-sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-session-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: #F4EFE9;
+}
+
+.recent-session-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-session-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #183D36;
+}
+
+.recent-session-time {
+  font-size: 12px;
+  color: #6C827B;
+  margin-top: 2px;
+}
+
+.recent-session-score {
+  font-size: 13px;
+  font-weight: 700;
+  color: #204C41;
+  background-color: #DCEBE3;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* Today's Reminders */
+.reminders-overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.reminder-overview-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: #F4EFE9;
+}
+
+.reminder-status-col {
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reminder-check-done {
+  color: #2E7D63;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.reminder-check-pending {
+  color: #A39D93;
+  font-size: 16px;
+}
+
+.reminder-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.reminder-item-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #183D36;
+}
+
+.reminder-item-title.completed-text {
+  color: #38554D;
+}
+
+.reminder-item-time {
+  font-size: 12px;
+  color: #6C827B;
+  margin-top: 2px;
+}
+
+.reminders-card-footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #ECE4D8;
+}
+
+.view-reminders-link {
+  background: transparent;
+  border: none;
+  color: #204C41;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.15s ease;
+}
+
+.view-reminders-link:hover {
+  color: #C27157;
+}
+
+/* Caregiver Add Reminder Header Actions & Pill */
+.bottom-card-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.caregiver-add-reminder-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #204C41;
+  color: #FAF7F2;
+  border: none;
+  border-radius: 14px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.caregiver-add-reminder-btn:hover {
+  background-color: #183D36;
+  transform: translateY(-1px);
+}
+
+.reminder-title-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.medical-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #E2ECE6;
+  color: #183D36;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.reminder-meta-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6C827B;
+  margin-top: 3px;
+  flex-wrap: wrap;
+}
+
+.meta-inline-dot {
+  color: #B4C6BF;
+}
+
+/* ==========================================================================
+   CAREGIVER ADD REMINDER MODAL
+   ========================================================================== */
+.caregiver-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(24, 61, 54, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.caregiver-modal-card {
+  background-color: #FAF7F2;
+  border: 1px solid #ECE4D8;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 36px rgba(24, 61, 54, 0.2);
+  animation: modalFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.caregiver-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid #ECE4D8;
+}
+
+.modal-elder-eyebrow {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5C746E;
+  margin-bottom: 4px;
+}
+
+.caregiver-modal-title {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0;
+}
+
+.caregiver-modal-close-btn {
+  background: transparent;
+  border: none;
+  color: #6C827B;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.caregiver-modal-close-btn:hover {
+  background-color: #EFE9DF;
+  color: #183D36;
+}
+
+.caregiver-modal-form {
+  padding: 20px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.caregiver-form-label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #204C41;
+  margin-bottom: 6px;
+}
+
+.label-optional {
+  font-size: 12px;
+  font-weight: 400;
+  color: #7A938B;
+}
+
+.caregiver-form-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14.5px;
+  font-family: inherit;
+  color: #183D36;
+  background-color: #FFFFFF;
+  border: 1px solid #D5DDD8;
+  border-radius: 12px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.caregiver-form-input:focus {
+  border-color: #204C41;
+  box-shadow: 0 0 0 3px rgba(32, 76, 65, 0.12);
+}
+
+.caregiver-form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* Category Grid */
+.caregiver-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.caregiver-cat-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2ECE6;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3B584E;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.caregiver-cat-btn:hover {
+  border-color: #204C41;
+  background-color: #F6FAF7;
+}
+
+.caregiver-cat-btn.selected {
+  border-color: #204C41;
+  background-color: #E2ECE6;
+  color: #183D36;
+  font-weight: 600;
+}
+
+.caregiver-cat-btn:first-child {
+  grid-column: span 2;
+  background-color: #F8FAF8;
+  border-color: #C8DCD1;
+}
+
+.caregiver-cat-btn:first-child.selected {
+  background-color: #E0EFE7;
+  border-color: #204C41;
+}
+
+/* Repeat Options */
+.caregiver-repeat-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.caregiver-repeat-pill {
+  flex: 1;
+  padding: 7px 12px;
+  background-color: #FFFFFF;
+  border: 1px solid #D5DDD8;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4A635B;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.caregiver-repeat-pill:hover {
+  border-color: #204C41;
+}
+
+.caregiver-repeat-pill.active {
+  background-color: #204C41;
+  border-color: #204C41;
+  color: #FAF7F2;
+  font-weight: 600;
+}
+
+.caregiver-days-pills {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.caregiver-day-btn {
+  padding: 5px 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #D5DDD8;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #4A635B;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.caregiver-day-btn.selected {
+  background-color: #183D36;
+  border-color: #183D36;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.caregiver-form-error {
+  margin: 0;
+  font-size: 13px;
+  color: #C2452D;
+  background-color: #FDF0ED;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #C2452D;
+}
+
+.caregiver-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.caregiver-modal-cancel {
+  background: transparent;
+  border: 1px solid #D5DDD8;
+  border-radius: 12px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4A635B;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.caregiver-modal-cancel:hover {
+  background-color: #EFE9DF;
+  color: #183D36;
+}
+
+.caregiver-modal-save {
+  background-color: #204C41;
+  color: #FAF7F2;
+  border: none;
+  border-radius: 12px;
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.caregiver-modal-save:hover {
+  background-color: #183D36;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .caregiver-middle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caregiver-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caregiver-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .caregiver-nav-header {
+    padding: 14px 20px;
+  }
+
+  .caregiver-dashboard-container {
+    padding: 24px 16px 40px;
+  }
+
+  .caregiver-hero-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .caregiver-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caregiver-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caregiver-cat-btn:first-child {
+    grid-column: span 1;
+  }
+}
+

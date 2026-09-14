@@ -1,0 +1,294 @@
+/* MINDCARE Language Selection Screen Styles (Desktop Optimized) */
+
+.language-screen {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F6F1EA;
+  color: var(--color-green-dark);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+}
+
+/* ==========================================================================
+   TOP HEADER
+   ========================================================================== */
+
+.lang-header {
+  padding: 32px 56px 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lang-brand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.lang-brand-btn:hover {
+  opacity: 0.9;
+}
+
+.lang-brand-btn:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+.lang-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-green-dark);
+  line-height: 1;
+}
+
+.lang-step-counter {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #557267;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   PROGRESS BAR
+   ========================================================================== */
+
+.lang-progress-wrapper {
+  width: 100%;
+  max-width: 660px;
+  margin: 36px auto 52px auto;
+  box-sizing: border-box;
+}
+
+.lang-progress-track {
+  width: 100%;
+  height: 4.5px;
+  background-color: #DEE7E1;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.lang-progress-fill {
+  height: 100%;
+  background-color: var(--color-green-deep);
+  border-radius: 100px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   MAIN CONTENT CONTAINER
+   ========================================================================== */
+
+.lang-content-container {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 64px;
+}
+
+/* Coral Intro Tagline */
+.lang-intro-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-bottom: 12px;
+}
+
+/* Main Display Heading */
+.lang-main-heading {
+  font-family: 'Fraunces', 'Noto Serif Bengali', 'Noto Serif Devanagari', serif;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1.18;
+  color: var(--color-green-dark);
+  margin-bottom: 34px;
+  letter-spacing: -0.015em;
+}
+
+/* ==========================================================================
+   LANGUAGE SELECTION CARDS
+   ========================================================================== */
+
+.lang-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* First Row: 3 cards side by side */
+.lang-row-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Second Row: 1 card centered */
+.lang-row-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Individual Card Styling */
+.lang-card {
+  height: 132px;
+  background-color: #FAF7F2;
+  border: 1.5px solid rgba(24, 61, 54, 0.08);
+  border-radius: 18px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.lang-card-center {
+  width: calc((100% - 40px) / 3);
+}
+
+.lang-card:hover {
+  border-color: rgba(24, 61, 54, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(24, 61, 54, 0.06);
+}
+
+/* Selected State */
+.lang-card.selected {
+  background-color: #D7E7DE;
+  border: 1.5px solid #5E8F7E;
+  box-shadow: 0 4px 14px rgba(24, 61, 54, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Focus Visible */
+.lang-card:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
+
+.lang-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-card-name {
+  font-family: 'Plus Jakarta Sans', 'Noto Serif Bengali', 'Noto Serif Devanagari', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   COMING SOON LANGUAGES
+   ========================================================================== */
+
+.lang-coming-soon-row {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coming-soon-text {
+  font-size: 0.875rem;
+  color: #7B8C83;
+  font-weight: 500;
+}
+
+.coming-soon-pill {
+  background-color: #E9DFD3;
+  color: #6D6356;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3.5px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   BOTTOM DIVIDER & CONTINUE ACTION
+   ========================================================================== */
+
+.lang-bottom-section {
+  margin-top: 48px;
+  border-top: 1px solid #E2D9CC;
+  padding-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn-lang-continue {
+  background-color: #265045;
+  color: #FAF6F0;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(38, 80, 69, 0.22);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-lang-continue:hover {
+  background-color: #1D4339;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(38, 80, 69, 0.32);
+}
+
+.btn-lang-continue:active {
+  transform: translateY(0);
+}
+
+.btn-lang-continue:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
+
+.btn-lang-continue:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-lang-arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.btn-lang-continue:hover .btn-lang-arrow {
+  transform: translateX(3px);
+}

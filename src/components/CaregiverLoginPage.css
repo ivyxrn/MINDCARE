@@ -1,0 +1,160 @@
+.caregiver-login-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #183D36;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px 48px;
+  box-sizing: border-box;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+}
+
+.caregiver-login-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.caregiver-login-header .brand-name {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #FAF7F2;
+}
+
+.caregiver-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 440px;
+}
+
+.back-welcome-btn {
+  background: transparent;
+  border: none;
+  color: #D6E4DD;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 4px;
+  margin-bottom: 16px;
+  transition: color 0.15s ease;
+}
+
+.back-welcome-btn:hover {
+  color: #FFFFFF;
+}
+
+.caregiver-login-card {
+  width: 100%;
+  background-color: #FAF7F2;
+  border-radius: 24px;
+  padding: 32px 32px 36px;
+  box-sizing: border-box;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.demo-access-box {
+  background-color: #E6EFEA;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #214C41;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.caregiver-title-group {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.caregiver-login-title {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 30px;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.caregiver-login-subtitle {
+  font-size: 15px;
+  color: #5C746E;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.caregiver-login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.caregiver-input-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.caregiver-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #183D36;
+  margin-bottom: 8px;
+}
+
+.caregiver-input {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #F3EFE9;
+  border: 1px solid #E5DED4;
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-size: 15px;
+  color: #183D36;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.caregiver-input:focus {
+  border-color: #204C41;
+  box-shadow: 0 0 0 3px rgba(32, 76, 65, 0.15);
+}
+
+.caregiver-submit-btn {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #204C41;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.caregiver-submit-btn:hover {
+  background-color: #183D36;
+}
+
+.caregiver-submit-btn:active {
+  transform: scale(0.99);
+}

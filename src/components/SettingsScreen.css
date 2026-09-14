@@ -1,0 +1,372 @@
+/* MINDCARE Accessibility Settings Screen Styles (Screen 3 of 3) */
+
+.settings-screen {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-cream-bg);
+  color: var(--color-green-dark);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+}
+
+/* ==========================================================================
+   TOP HEADER
+   ========================================================================== */
+
+.settings-header {
+  padding: 32px 56px 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.settings-brand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.settings-brand-btn:hover {
+  opacity: 0.9;
+}
+
+.settings-brand-btn:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+.settings-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-green-dark);
+  line-height: 1;
+}
+
+.settings-step-counter {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #557267;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   PROGRESS BAR (100% for Step 3 of 3)
+   ========================================================================== */
+
+.settings-progress-wrapper {
+  width: 100%;
+  max-width: 660px;
+  margin: 36px auto 52px auto;
+  box-sizing: border-box;
+}
+
+.settings-progress-track {
+  width: 100%;
+  height: 4.5px;
+  background-color: #DEE7E1;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.settings-progress-fill {
+  height: 100%;
+  background-color: var(--color-green-deep);
+  border-radius: 100px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   MAIN CONTENT CONTAINER
+   ========================================================================== */
+
+.settings-content-container {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 64px;
+}
+
+/* Coral Intro Tagline */
+.settings-intro-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-bottom: 12px;
+}
+
+/* Main Display Heading */
+.settings-main-heading {
+  font-family: 'Fraunces', 'Noto Serif Bengali', 'Noto Serif Devanagari', serif;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1.18;
+  color: var(--color-green-dark);
+  margin-bottom: 32px;
+  letter-spacing: -0.015em;
+}
+
+/* ==========================================================================
+   SETTINGS CARDS STACK
+   ========================================================================== */
+
+.settings-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.settings-card {
+  height: 68px;
+  background-color: var(--color-cream-card);
+  border: 1.5px solid rgba(24, 61, 54, 0.09);
+  border-radius: 18px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
+  transition: all 0.2s ease;
+}
+
+.settings-card:hover {
+  border-color: rgba(24, 61, 54, 0.2);
+}
+
+.settings-card-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  user-select: none;
+}
+
+.settings-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-green-dark);
+}
+
+/* ==========================================================================
+   TEXT SIZE SEGMENTED PILL CONTROL
+   ========================================================================== */
+
+.text-size-pill {
+  background-color: #DEE8E2;
+  border-radius: 100px;
+  padding: 3px 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  user-select: none;
+}
+
+.text-size-btn {
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #385C50;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-size-btn:hover:not(.active) {
+  color: var(--color-green-deep);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.text-size-btn.active {
+  background-color: #265045;
+  color: #FAF6F0;
+  box-shadow: 0 2px 6px rgba(38, 80, 69, 0.28);
+}
+
+.text-size-btn:focus-visible {
+  outline: 2px solid var(--color-green-deep);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   ACCESSIBLE TOGGLE SWITCH
+   ========================================================================== */
+
+.toggle-switch {
+  width: 52px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #D5DED9;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.toggle-switch:hover {
+  filter: brightness(0.97);
+}
+
+.toggle-switch.active {
+  background-color: #265045;
+}
+
+.toggle-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.toggle-switch.active .toggle-thumb {
+  transform: translateX(22px);
+}
+
+.toggle-switch:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   NAVIGATION DIVIDER & BUTTONS
+   ========================================================================== */
+
+.settings-bottom-section {
+  margin-top: 56px;
+  border-top: 1px solid #E2D9CC;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-settings-back {
+  background: none;
+  border: none;
+  color: var(--color-green-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  font-family: var(--font-sans);
+}
+
+.btn-settings-back:hover {
+  color: #0E2822;
+  background-color: rgba(24, 61, 54, 0.05);
+  transform: translateX(-2px);
+}
+
+.btn-settings-back:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
+
+/* Finish Setup Button in Warm Coral */
+.btn-settings-finish {
+  background-color: var(--color-coral);
+  color: #FAF6F0;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-btn);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-sans);
+}
+
+.btn-settings-finish:hover {
+  background-color: var(--color-coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(223, 138, 115, 0.38);
+}
+
+.btn-settings-finish:active {
+  transform: translateY(0);
+}
+
+.btn-settings-finish:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 3px;
+}
+
+.btn-settings-check {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* Success Confirmation Banner */
+.settings-completion-banner {
+  margin-top: 24px;
+  background-color: #D7E7DE;
+  border: 1.5px solid #5E8F7E;
+  color: #183D36;
+  border-radius: 14px;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(24, 61, 54, 0.08);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

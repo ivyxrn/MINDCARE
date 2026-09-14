@@ -1,0 +1,310 @@
+/* MINDCARE Profile & Joy Preferences Screen Styles (Desktop Optimized) */
+
+.profile-screen {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F6F1EA;
+  color: var(--color-green-dark);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+}
+
+/* ==========================================================================
+   TOP HEADER
+   ========================================================================== */
+
+.profile-header {
+  padding: 32px 56px 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-brand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.profile-brand-btn:hover {
+  opacity: 0.9;
+}
+
+.profile-brand-btn:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+.profile-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-green-dark);
+  line-height: 1;
+}
+
+.profile-step-counter {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #557267;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   PROGRESS BAR (~66.7% for Step 2 of 3)
+   ========================================================================== */
+
+.profile-progress-wrapper {
+  width: 100%;
+  max-width: 660px;
+  margin: 36px auto 52px auto;
+  box-sizing: border-box;
+}
+
+.profile-progress-track {
+  width: 100%;
+  height: 4.5px;
+  background-color: #DEE7E1;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.profile-progress-fill {
+  height: 100%;
+  background-color: var(--color-green-deep);
+  border-radius: 100px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   MAIN CONTENT CONTAINER
+   ========================================================================== */
+
+.profile-content-container {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 64px;
+}
+
+/* Coral Intro Tagline */
+.profile-intro-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-bottom: 12px;
+}
+
+/* Main Display Heading */
+.profile-main-heading {
+  font-family: 'Fraunces', 'Noto Serif Bengali', 'Noto Serif Devanagari', serif;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1.18;
+  color: var(--color-green-dark);
+  margin-bottom: 28px;
+  letter-spacing: -0.015em;
+}
+
+/* ==========================================================================
+   NAME INPUT FIELD
+   ========================================================================== */
+
+.name-input-group {
+  width: 100%;
+  margin-bottom: 38px;
+}
+
+.profile-name-input {
+  width: 100%;
+  height: 58px;
+  background-color: #FAF7F2;
+  border: 1.5px solid rgba(24, 61, 54, 0.14);
+  border-radius: 14px;
+  padding: 0 20px;
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  color: var(--color-green-dark);
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  caret-color: var(--color-green-deep);
+}
+
+.profile-name-input:hover {
+  border-color: rgba(24, 61, 54, 0.28);
+}
+
+.profile-name-input:focus {
+  outline: none;
+  background-color: #FFFFFF;
+  border-color: #265045;
+  box-shadow: 0 0 0 3.5px rgba(38, 80, 69, 0.16);
+}
+
+/* ==========================================================================
+   WHAT BRINGS YOU JOY?
+   ========================================================================== */
+
+.joy-section {
+  width: 100%;
+}
+
+.joy-heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.joy-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.joy-chip {
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #FAF7F2;
+  border: 1.5px solid rgba(24, 61, 54, 0.12);
+  color: var(--color-green-dark);
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.joy-chip:hover {
+  border-color: rgba(24, 61, 54, 0.32);
+  transform: translateY(-1.5px);
+}
+
+/* Selected State: Strong Filled Green */
+.joy-chip.selected {
+  background-color: #285548;
+  border-color: #285548;
+  color: #FAF6F0;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(40, 85, 72, 0.24);
+}
+
+.joy-chip.selected:hover {
+  background-color: #1F453A;
+  border-color: #1F453A;
+  transform: translateY(-1.5px);
+}
+
+.joy-chip:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   NAVIGATION DIVIDER & BUTTONS
+   ========================================================================== */
+
+.profile-bottom-section {
+  margin-top: 56px;
+  border-top: 1px solid #E2D9CC;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-profile-back {
+  background: none;
+  border: none;
+  color: var(--color-green-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  font-family: var(--font-sans);
+}
+
+.btn-profile-back:hover {
+  color: #0E2822;
+  background-color: rgba(24, 61, 54, 0.05);
+  transform: translateX(-2px);
+}
+
+.btn-profile-back:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
+
+.btn-profile-continue {
+  background-color: #265045;
+  color: #FAF6F0;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(38, 80, 69, 0.22);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-sans);
+}
+
+.btn-profile-continue:hover {
+  background-color: #1D4339;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(38, 80, 69, 0.32);
+}
+
+.btn-profile-continue:active {
+  transform: translateY(0);
+}
+
+.btn-profile-continue:focus-visible {
+  outline: 3px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
+
+.btn-profile-arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.btn-profile-continue:hover .btn-profile-arrow {
+  transform: translateX(3px);
+}

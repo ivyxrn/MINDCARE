@@ -1,0 +1,741 @@
+/* ==========================================================================
+   MINDCARE Progress Page Styles (Desktop Optimized)
+   ========================================================================== */
+
+.progress-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-cream-bg, #FBF8F2);
+  box-sizing: border-box;
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+}
+
+/* ==========================================================================
+   LEFT SIDEBAR (Consistent with HomePage & ActivitiesPage)
+   ========================================================================== */
+
+.progress-sidebar {
+  width: 280px;
+  min-width: 280px;
+  background-color: var(--color-green-deep, #183D36);
+  color: var(--color-cream-light, #FAF6EE);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 38px 24px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.progress-sidebar .sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Sidebar Brand Header */
+.progress-sidebar .sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 4px;
+}
+
+.progress-sidebar .sidebar-brand-title {
+  font-family: var(--font-serif, 'Newsreader', Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-cream-light, #FAF6EE);
+  line-height: 1;
+}
+
+/* Navigation List */
+.progress-sidebar .sidebar-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.progress-sidebar .sidebar-nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #C3D5CD;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.progress-sidebar .sidebar-nav-btn:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-cream-light, #FAF6EE);
+  transform: translateX(2px);
+}
+
+/* Active Nav Pill: Warm Peach/Cream Filled Pill */
+.progress-sidebar .sidebar-nav-btn.active {
+  background-color: #F5E8D8;
+  color: #183D36;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.progress-sidebar .sidebar-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+/* Sidebar Bottom Navigation */
+.progress-sidebar .sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid rgba(215, 231, 222, 0.15);
+  padding-top: 24px;
+}
+
+.progress-sidebar .sidebar-bottom .sidebar-nav-btn {
+  color: #A9C2B7;
+  font-size: 1.05rem;
+  padding: 13px 18px;
+}
+
+.progress-sidebar .sidebar-bottom .sidebar-nav-btn:hover {
+  color: var(--color-cream-light, #FAF6EE);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================================================
+   MAIN CONTENT WRAPPER & TOP STATUS BAR
+   ========================================================================== */
+
+.progress-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--color-cream-bg, #FBF8F2);
+  overflow-y: auto;
+}
+
+/* Top Status Bar */
+.progress-top-bar {
+  padding: 26px 60px 16px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.progress-top-bar .top-bar-left {
+  display: flex;
+  align-items: center;
+}
+
+.progress-top-bar .network-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2A5C4F;
+}
+
+.progress-top-bar .top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.progress-top-bar .online-badge {
+  background-color: #E8F3EE;
+  color: #234D41;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.progress-top-bar .status-icon-btn {
+  background-color: #E8F0EC;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.progress-top-bar .status-icon-btn:hover {
+  background-color: #DAE7E1;
+  transform: translateY(-1px);
+}
+
+.progress-top-bar .user-avatar-btn {
+  background-color: #D9886C;
+  color: #FFFFFF;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(217, 136, 108, 0.25);
+  transition: transform 0.18s ease;
+}
+
+.progress-top-bar .user-avatar-btn:hover {
+  transform: scale(1.05);
+}
+
+.progress-top-bar .avatar-initials {
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   PROGRESS CONTENT CONTAINER
+   ========================================================================== */
+
+.progress-content-container {
+  padding: 10px 60px 60px 60px;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Header Banner */
+.progress-header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-eyebrow {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #C86F58;
+  letter-spacing: 0.02em;
+}
+
+.progress-page-title {
+  font-family: var(--font-serif, 'Newsreader', Georgia, serif);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.progress-subtitle {
+  font-size: 1.15rem;
+  color: #5C7A70;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 780px;
+}
+
+/* ==========================================================================
+   THREE SUMMARY METRIC CARDS
+   ========================================================================== */
+
+.progress-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.progress-metric-card {
+  border-radius: 22px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.progress-metric-card:hover {
+  transform: translateY(-2px);
+}
+
+.metric-card-sessions {
+  background-color: #DDEEE5;
+}
+
+.metric-card-accuracy {
+  background-color: #F8DACB;
+}
+
+.metric-card-response {
+  background-color: #F7E6BA;
+}
+
+.progress-metric-card .metric-number {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #183D36;
+  line-height: 1;
+}
+
+.progress-metric-card .metric-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #406257;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   MIDDLE SECTION: RECENT SESSIONS & THIS WEEK
+   ========================================================================== */
+
+.progress-middle-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.progress-card {
+  border-radius: 24px;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+/* LEFT: Recent Sessions Card */
+.recent-sessions-card {
+  background-color: #FAF7F2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-sessions-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.recent-sessions-card .card-title {
+  font-family: var(--font-serif, 'Newsreader', Georgia, serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #183D36;
+  margin: 0;
+}
+
+.recent-sessions-card .card-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-session-item {
+  background-color: #F4EFE6;
+  border-radius: 16px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.recent-session-item:hover {
+  transform: translateX(3px);
+  background-color: #EFE9DE;
+}
+
+.session-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.session-activity-name {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0;
+}
+
+.session-meta {
+  font-size: 0.98rem;
+  color: #638076;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-dot {
+  font-weight: bold;
+}
+
+.session-accuracy-badge {
+  background-color: #E2EFE7;
+  color: #183D36;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+/* Empty State */
+.empty-sessions-state {
+  padding: 48px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.empty-title {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #385C50;
+  margin: 0;
+}
+
+.empty-subtitle {
+  font-size: 1.02rem;
+  color: #6F8B81;
+  margin: 0;
+}
+
+/* RIGHT: This Week Card with Bar Chart */
+.this-week-card {
+  background-color: #DDEEE5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.this-week-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.this-week-card .card-title {
+  font-family: var(--font-serif, 'Newsreader', Georgia, serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #183D36;
+  margin: 0;
+}
+
+.chart-sublabel {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #4C6F63;
+}
+
+/* Weekly Chart Container */
+.weekly-chart-container {
+  padding: 16px 4px 8px 4px;
+}
+
+.weekly-chart-bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 180px;
+  padding-bottom: 8px;
+}
+
+.weekly-bar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.bar-track {
+  display: flex;
+  align-items: flex-end;
+  height: 140px;
+  width: 100%;
+  justify-content: center;
+}
+
+.bar-fill {
+  width: 26px;
+  border-radius: 13px;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+/* Bar color styles matching prototype aesthetics */
+.bar-fill.bar-muted {
+  background-color: #8DB4A1;
+}
+
+.bar-fill.bar-primary {
+  background-color: #245044;
+}
+
+.bar-fill.bar-accent {
+  background-color: #8DB4A1;
+}
+
+.bar-fill.bar-today {
+  background-color: #DF886E;
+}
+
+.day-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #416357;
+}
+
+.day-label.label-today {
+  font-weight: 700;
+  color: #183D36;
+}
+
+/* Gentle Insight Box */
+.gentle-insight-box {
+  background-color: #FAF7F2;
+  border-radius: 16px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.insight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.insight-text {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.98rem;
+  color: #27493E;
+  margin: 0;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   ACTIVITY BREAKDOWN: "Your activities"
+   ========================================================================== */
+
+.activity-breakdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.breakdown-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.breakdown-eyebrow {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #C86F58;
+  letter-spacing: 0.02em;
+}
+
+.breakdown-title {
+  font-family: var(--font-serif, 'Newsreader', Georgia, serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #183D36;
+  margin: 0;
+}
+
+.breakdown-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.breakdown-card {
+  background-color: #FAF7F2;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.breakdown-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.breakdown-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breakdown-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: #EAF3EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breakdown-accuracy-pill {
+  background-color: #DDEEE5;
+  color: #183D36;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.breakdown-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.breakdown-activity-name {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #183D36;
+  margin: 0;
+}
+
+.breakdown-stat .stat-active {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #406357;
+}
+
+.breakdown-stat .stat-unplayed {
+  font-size: 0.98rem;
+  font-style: italic;
+  color: #79968B;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS (Desktop First)
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .progress-middle-grid {
+    grid-template-columns: 1fr;
+  }
+  .breakdown-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-layout {
+    flex-direction: column;
+  }
+  .progress-sidebar {
+    width: 100%;
+    min-width: 100%;
+  }
+  .progress-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .breakdown-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .progress-top-bar,
+  .progress-content-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & HIGH CONTRAST OVERRIDES
+   ========================================================================== */
+
+[data-high-contrast="true"] .progress-page-title,
+[data-high-contrast="true"] .card-title,
+[data-high-contrast="true"] .breakdown-title,
+[data-high-contrast="true"] .session-activity-name,
+[data-high-contrast="true"] .breakdown-activity-name {
+  color: #0B241E !important;
+}
+
+[data-high-contrast="true"] .progress-metric-card {
+  border: 2px solid #0B241E;
+}
+
+[data-high-contrast="true"] .recent-sessions-card,
+[data-high-contrast="true"] .this-week-card,
+[data-high-contrast="true"] .breakdown-card {
+  border: 2px solid #183D36;
+}
+
+[data-high-contrast="true"] .recent-session-item {
+  border: 1px solid #183D36;
+}
